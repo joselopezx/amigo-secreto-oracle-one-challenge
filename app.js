@@ -4,6 +4,7 @@ let nombres = []
 function agregarAmigo(){
    //Diferentes formas para tomar el elemto del imput
    // let entrada = document.getElementById("amigo");
+    let tamanioLista = nombres.length;
     let entrada = document.querySelector("#amigo")
     let nombre = entrada.value.trim();
     if(nombre == ""){
@@ -12,6 +13,9 @@ function agregarAmigo(){
         nombres.push(nombre);
         document.getElementById("amigo").value = "";
         listarNombres();
+        /*if (tamanioLista > 1){
+            document.getElementById("botonSortear").removeAttribute("disabled");
+        }*/
     }
 }
 
@@ -33,6 +37,7 @@ function sortearAmigo(){
     if(tamanioLista<2){
         alert("No se han ingresado mas de un Nombre para la selección");
     }else{
-        let mostrarNombre =  document.getElementById("nombreAmigo").innerHTML=("Tu amigo secreto es "+ nombres[amigoAleatorio]);
+        //document.getElementById("botonSortear").setAttribute("disabled", "true");
+        document.getElementById("nombreAmigo").innerHTML=("Tu amigo secreto es "+ nombres[amigoAleatorio]);
     }
 }
