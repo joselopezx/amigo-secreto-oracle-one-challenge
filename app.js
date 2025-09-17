@@ -16,15 +16,23 @@ function agregarAmigo(){
 }
 
 function listarNombres(){
-let lista = document.getElementById("listaAmigos");
-lista.innerHTML="";
-let tamanioLista = nombres.length;
-let i=0;
-for(i=0; i<tamanioLista; i++){
-    const li = document.createElement("li");
-    li.textContent = nombres[i];
-    lista.appendChild(li);
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML="";
+    let tamanioLista = nombres.length;
+    let i=0;
+    for(i=0; i<tamanioLista; i++){
+        const li = document.createElement("li");
+        li.textContent = nombres[i];
+        lista.appendChild(li);
+    }
 }
 
+function sortearAmigo(){
+    let tamanioLista = nombres.length;
+    amigoAleatorio = Math.floor(Math.random() * tamanioLista);
+    if(tamanioLista<2){
+        alert("No se han ingresado mas de un Nombre para la selección");
+    }else{
+        let mostrarNombre =  document.getElementById("nombreAmigo").innerHTML=("Tu amigo secreto es "+ nombres[amigoAleatorio]);
+    }
 }
-
