@@ -4,7 +4,7 @@ let nombres = []
 function agregarAmigo(){
    //Diferentes formas para tomar el elemto del imput
    // let entrada = document.getElementById("amigo");
-    let tamanioLista = nombres.length;
+    //let tamanioLista = nombres.length;
     let entrada = document.querySelector("#amigo")
     let nombre = entrada.value.trim();
     if(nombre == ""){
